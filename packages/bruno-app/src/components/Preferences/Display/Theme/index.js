@@ -13,7 +13,7 @@ const Theme = () => {
       theme: storedTheme
     },
     validationSchema: Yup.object({
-      theme: Yup.string().oneOf(['light', 'dark', 'system']).required('theme is required')
+      theme: Yup.string().oneOf(['light', 'dark', 'system', 'slime']).required('theme is required')
     }),
     onSubmit: (values) => {
       setStoredTheme(values.theme);
@@ -70,6 +70,21 @@ const Theme = () => {
           />
           <label htmlFor="system-theme" className="ml-1 cursor-pointer select-none">
             System
+          </label>
+          <input
+            id="slime-theme"
+            className="ml-4 cursor-pointer"
+            type="radio"
+            name="theme"
+            onChange={(e) => {
+              formik.handleChange(e);
+              formik.handleSubmit();
+            }}
+            value="slime"
+            checked={formik.values.theme === 'slime'}
+          />
+          <label htmlFor="slime-theme" className="ml-1 cursor-pointer select-none">
+            Slime
           </label>
         </div>
       </div>

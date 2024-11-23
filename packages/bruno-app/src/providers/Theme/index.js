@@ -34,13 +34,16 @@ export const ThemeProvider = (props) => {
     } else {
       setDisplayedTheme(storedTheme);
       root.classList.add(storedTheme);
+      console.log(theme)
     }
+    console.log(storedTheme);
+    //setDisplayedTheme(storedTheme);
   }, [storedTheme, setDisplayedTheme, window.matchMedia]);
 
   // storedTheme can have 3 values: 'light', 'dark', 'system'
   // displayedTheme can have 2 values: 'light', 'dark'
 
-  const theme = storedTheme === 'system' ? themes[displayedTheme] : themes[storedTheme];
+  const theme = themes[displayedTheme];
   const themeOptions = Object.keys(themes);
   const value = {
     theme,

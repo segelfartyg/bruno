@@ -7,6 +7,7 @@ import { useTheme } from 'providers/Theme';
 import { useDispatch } from 'react-redux';
 import darkTheme from 'themes/dark';
 import lightTheme from 'themes/light';
+import Theme from 'themes/slime';
 import { findItemInCollection } from 'utils/collections';
 import ConfirmRequestClose from './ConfirmRequestClose';
 import RequestTabNotFound from './RequestTabNotFound';
