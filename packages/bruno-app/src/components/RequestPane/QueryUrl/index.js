@@ -11,8 +11,10 @@ import { isMacOS } from 'utils/common/platform';
 import StyledWrapper from './StyledWrapper';
 import GenerateCodeItem from 'components/Sidebar/Collections/Collection/CollectionItem/GenerateCodeItem/index';
 import toast from 'react-hot-toast';
+import JSConfetti from 'js-confetti';
 
 const QueryUrl = ({ item, collection, handleRun }) => {
+  const jsConfetti = new JSConfetti();;
   const { theme, storedTheme } = useTheme();
   const dispatch = useDispatch();
   const method = item.draft ? get(item, 'draft.request.method') : get(item, 'request.method');
@@ -78,7 +80,7 @@ const QueryUrl = ({ item, collection, handleRun }) => {
   };
 
   const onRequestClick = (e) => {
-    console.log("HEJJJ");
+      jsConfetti.addConfetti({emojis:['🐶']});
   }
 
   return (
