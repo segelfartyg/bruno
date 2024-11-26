@@ -80,7 +80,7 @@ const QueryUrl = ({ item, collection, handleRun }) => {
   };
 
   const onRequestClick = (e) => {
-      jsConfetti.addConfetti({emojis:['🐶']});
+      jsConfetti.addConfetti({emojis:['🦴'], emojiSize: 20});
   }
 
   return (

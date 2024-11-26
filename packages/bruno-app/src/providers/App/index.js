@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux';
 import { refreshScreenWidth } from 'providers/ReduxStore/slices/app';
 import ConfirmAppClose from './ConfirmAppClose';
 import useIpcEvents from './useIpcEvents';
-import useTelemetry from './useTelemetry';
+// import useTelemetry from './useTelemetry';
 import StyledWrapper from './StyledWrapper';
 
 export const AppContext = React.createContext();
 
 export const AppProvider = (props) => {
-  useTelemetry();
+ // useTelemetry();
   useIpcEvents();
 
   const dispatch = useDispatch();

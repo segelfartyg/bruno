@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'components/Modal/index';
-import { PostHog } from 'posthog-node';
+// import { PostHog } from 'posthog-node';
 import { uuid } from 'utils/common';
 import { IconHeart, IconUser, IconUsers, IconPlus } from '@tabler/icons';
 import platformLib from 'platform';
 import StyledWrapper from './StyledWrapper';
 import { useTheme } from 'providers/Theme/index';
 
-let posthogClient = null;
-const posthogApiKey = process.env.NEXT_PUBLIC_POSTHOG_API_KEY;
-const getPosthogClient = () => {
-  if (posthogClient) {
-    return posthogClient;
-  }
+// let posthogClient = null;
+// const posthogApiKey = process.env.NEXT_PUBLIC_POSTHOG_API_KEY;
+// const getPosthogClient = () => {
+//   if (posthogClient) {
+//     return posthogClient;
+//   }
 
-  posthogClient = new PostHog(posthogApiKey);
-  return posthogClient;
-};
+//   posthogClient = new PostHog(posthogApiKey);
+//   return posthogClient;
+// };
 const getAnonymousTrackingId = () => {
   let id = localStorage.getItem('bruno.anonymousTrackingId');
 
@@ -63,26 +63,26 @@ const GoldenEdition = ({ onClose }) => {
 
   useEffect(() => {
     const anonymousId = getAnonymousTrackingId();
-    const client = getPosthogClient();
-    client.capture({
-      distinctId: anonymousId,
-      event: 'golden-edition-modal-opened',
-      properties: {
-        os: platformLib.os.family
-      }
-    });
+    // const client = getPosthogClient();
+    // client.capture({
+    //   distinctId: anonymousId,
+    //   event: 'golden-edition-modal-opened',
+    //   properties: {
+    //     os: platformLib.os.family
+    //   }
+    // });
   }, []);
 
   const goldenEditionBuyClick = () => {
     const anonymousId = getAnonymousTrackingId();
-    const client = getPosthogClient();
-    client.capture({
-      distinctId: anonymousId,
-      event: 'golden-edition-buy-clicked',
-      properties: {
-        os: platformLib.os.family
-      }
-    });
+    // const client = getPosthogClient();
+    // client.capture({
+    //   distinctId: anonymousId,
+    //   event: 'golden-edition-buy-clicked',
+    //   properties: {
+    //     os: platformLib.os.family
+    //   }
+    // });
   };
 
   const goldenEditonIndividuals = [
