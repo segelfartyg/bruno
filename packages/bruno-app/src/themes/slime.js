@@ -42,21 +42,21 @@ const slimeTheme = {
   sidebar: {
     color: '#ccc',
     muted: '#9d9d9d',
-    bg: '#252526',
+    bg: '#1A4D2E',
     dragbar: '#666666',
 
     badge: {
-      bg: '#3D3D3D'
+      bg: '#508D4E'
     },
 
     search: {
       border: '1px solid transparent',
-      bg: '#3D3D3D'
+      bg: '#D6EFD8'
     },
 
     collection: {
       item: {
-        bg: '#37373D',
+        bg: '#C08B5C',
         hoverBg: '#2A2D2F',
         indentBorder: 'solid 1px #585858',
         active: {
@@ -203,7 +203,7 @@ const slimeTheme = {
   tabs: {
     active: {
       color: '#ccc',
-      border: '#569cd6'
+      border: '#1A5319'
     }
   },
 

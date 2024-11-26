@@ -1,5 +1,5 @@
 <br />
-<img src="../../assets/images/logo-transparent.png" width="80"/>
+<img src="../../assets/images/logo-shades-transparent.png" width="80"/>
 
 ### Bruno - IDE de código aberto para explorar e testar APIs.
 

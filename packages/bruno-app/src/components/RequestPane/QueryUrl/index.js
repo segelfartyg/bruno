@@ -77,6 +77,10 @@ const QueryUrl = ({ item, collection, handleRun }) => {
     }
   };
 
+  const onRequestClick = (e) => {
+    console.log("HEJJJ");
+  }
+
   return (
     <StyledWrapper className="flex items-center">
       <div className="flex items-center h-full method-selector-container">
@@ -136,7 +140,7 @@ const QueryUrl = ({ item, collection, handleRun }) => {
               Save <span className="shortcut">({saveShortcut})</span>
             </span>
           </div>
-          <IconArrowRight color={theme.requestTabPanel.url.icon} strokeWidth={1.5} size={22} />
+          <IconArrowRight onClick={onRequestClick} color={theme.requestTabPanel.url.icon} strokeWidth={1.5} size={22} />
         </div>
       </div>
       {generateCodeItemModalOpen && (

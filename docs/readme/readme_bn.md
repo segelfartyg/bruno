@@ -1,5 +1,5 @@
 <br />
-<img src="../../assets/images/logo-transparent.png" width="80"/>
+<img src="../../assets/images/logo-shades-transparent.png" width="80"/>
 
 ### ব্রুনো - API অন্বেষণ এবং পরীক্ষা করার জন্য ওপেনসোর্স IDE।
 

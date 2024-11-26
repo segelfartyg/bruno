@@ -1,5 +1,5 @@
 <br />
-<img src="../../assets/images/logo-transparent.png" width="80"/>
+<img src="../../assets/images/logo-shades-transparent.png" width="80"/>
 
 ### ბრუნო - ღია წყაროების IDE API-ების შესწავლისა და ტესტირებისათვის.
 
